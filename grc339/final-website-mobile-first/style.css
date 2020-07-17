@@ -11,16 +11,13 @@ div.container {
 }
 
 figure {
-    margin: 0;
-}
-
-img {
-    width: 35%;
+    margin: 0em 0em 1em 0em;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0.3em;
+    margin-bottom: 2.5em;
     color: rgb(48, 50, 40);
 }
 
@@ -38,7 +35,7 @@ h3 {
 p {
     color: rgb(48, 50, 40);
     font-family: sans-serif;
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 1em 2em 2em;
 }
 
@@ -52,21 +49,11 @@ a:visited {
     color: rgb(140, 140, 134);
 }
 
-div.image1,
-div.image2,
-div.image3,
-div.image4,
-div.image5,
-div.image6,
-div.image7 {
-    width: 85em;
-    margin-bottom: 0em;
-}
-
 figcaption {
     font-size: 0.8em;
     font-style: italic;
     color: rgb(140, 140, 134);
+    margin-bottom: 2em;
 }
 
 section p {
@@ -92,6 +79,49 @@ h3 {
     padding-top: 0.6em;
     text-align: left;
 }
+
+.gallery main {
+    position: relative;
+    padding-bottom: calc(72% + 2.5em);
+}
+input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ main figure:nth-of-type(8) {
+    opacity: 1;
+}
+
+.gallery nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.3em 0.3em;
+    padding-bottom: 2em;
+}
+
+.gallery figure {
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+input {
+    display: none;
+}
+
+div.logo {
+    width: 13em;
+}
+
+img {
+    width: 100%;
+}
+
 footer {
     text-align: left;
     padding: 0.6em;
