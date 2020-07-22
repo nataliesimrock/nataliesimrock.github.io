@@ -148,7 +148,7 @@ aside.mainstory {
         grid-gap: 0 1em;
     }
     main {
-        grid-column: 1/2;
+        grid-column: 1/4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
